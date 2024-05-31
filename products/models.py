@@ -119,7 +119,7 @@ class ProductModel(models.Model):
             return self.price - self.discount * self.price / 100
 
     def get_related_products(self):
-        return ProductModel.objects.filter(categories=1).exclude(pk=self.pk)[:3]
+        return ProductModel.objects.filter(categories__in=self.categories.all()).exclude(pk=self.pk).distinct()[:3]
 
     class Meta:
         ordering = ['title']
