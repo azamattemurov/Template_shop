@@ -107,6 +107,7 @@ def logout_view(request):
         logout(request)
         return redirect(reverse_lazy('pages:home'))
 
+
 class CartView(TemplateView):
     template_name = 'users/cart.html'
 
