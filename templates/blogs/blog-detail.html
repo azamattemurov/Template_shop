@@ -42,7 +42,7 @@
                                             <div class="block-content">
                                                 {% for cat in category %}
                                                 <div class="cateTitle hasSubCategory open level1">
-                                                    <a class="cateItem" href="#">{{ cat.name }}</a>
+                                                    <a class="cateItem" href="../../?cat={{ cat.id }}">{{ cat.name }}</a>
                                                 </div>
                                                 {% endfor %}
                                             </div>
@@ -84,7 +84,7 @@
                                                 <ul class="listSidebarBlog list-unstyled">
                                                     {% for tag in tags %}
                                                     <li>
-                                                        <a href="#" title="Show products matching tag Hot Trend">{{ tag.name }}</a>
+                                                        <a href="../../?tag={{ tag.id }}" title="Show products matching tag Hot Trend">{{ tag.name }}</a>
                                                     </li>
                                                     {% endfor %}
                                                 </ul>

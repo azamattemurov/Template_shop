@@ -47,3 +47,4 @@ class BlogDetailView(DetailView):
             "related_blogs": BlogModel.objects.filter(category__in=self.object.category.all())[:3]
         }
         return context
+

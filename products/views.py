@@ -1,3 +1,4 @@
+from django.shortcuts import redirect
 from django.views.generic import ListView, DetailView
 
 from products.models import ProductModel, ProductCategoryModel, ProductManufacture, ProductColor, ProductTagModel, \
@@ -28,8 +29,6 @@ class ProductListView(ListView):
 
         return qs
 
-
-
     def get_context_data(self, *, object_list=None, **kwargs):
         content = super().get_context_data(**kwargs)
         content['categories'] = ProductCategoryModel.objects.all()
@@ -54,3 +53,14 @@ class ProductDetailView(DetailView):
         content['manufacture'] = ProductManufacture.objects.all()
 
         return content
+
+
+def add_or_remove(request, pk):
+    cart = request.session.get('cart', [])
+    if pk in cart:
+        cart.remove(pk)
+    else:
+        cart.append(pk)
+    request.session['cart'] = cart
+    return redirect(request.GET.get('next', 'products:list'))
+

@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load my_tags %}
 {% block content %}
 <div class="main-content">
         <div id="wrapper-site">
@@ -185,9 +186,11 @@
                                                                     </div>
                                                                 </div>
                                                                 <div class="product-buttons d-flex justify-content-center">
-                                                                    <form action="#" method="post" class="formAddToCart">
-                                                                        <input type="hidden" name="id_product" value="1">
-                                                                        <a class="add-to-cart" href="#" data-button-action="add-to-cart">
+                                                                    <form action="#" method="post"
+                                                                          class="formAddToCart">
+                                                                        <input type="hidden" name="id_product" 
+                                                                               value="1">
+                                                                        <a  {% if request|in_carts:pk %} style="color: red"{% endif %} class="add-to-cart" href="{% url 'products:add-or-remove' pk=product.id %}?next={{ request.get_full_path|urlencode }}" data-button-action="add-to-cart">
                                                                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                                                         </a>
                                                                     </form>
@@ -253,7 +256,7 @@
                                                                         </div>
                                                                         <div class="product-buttons d-flex">
                                                                             <form action="#" method="post" class="formAddToCart">
-                                                                                <a class="add-to-cart" href="#" data-button-action="add-to-cart">
+                                                                                 <a  {% if request|in_carts:pk %} style="color: red"{% endif %} class="add-to-cart" href="{% url 'products:add-or-remove' pk=product.id %}?next={{ request.get_full_path|urlencode }}" data-button-action="add-to-cart">
                                                                                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>Add to cart
                                                                                 </a>
                                                                             </form>
