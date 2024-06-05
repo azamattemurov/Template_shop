@@ -95,6 +95,7 @@ class ProductModel(models.Model):
     discount = models.PositiveSmallIntegerField(default=0, validators=[MaxValueValidator(100), MinValueValidator(0)])
     sku = models.CharField(max_length=10, unique=True)
     count = models.PositiveIntegerField()
+    real_price = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
 
     manufacture = models.ForeignKey(ProductManufacture, on_delete=models.CASCADE, related_name='products')
     color = models.ManyToManyField(ProductColor, related_name='products')
@@ -138,3 +139,6 @@ class ProductImageModel(models.Model):
         ordering = ['title']
         verbose_name = 'image'
         verbose_name_plural = 'images'
+
+
+

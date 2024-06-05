@@ -24,6 +24,7 @@ class ProductModelAdmin(admin.ModelAdmin):
     search_fields = ('title', 'created_at')
     list_filter = ('created_at',)
     inlines = [ProductImageModelAdmin]
+    readonly_fields = ['real_price']
 
 
 @admin.register(ProductSizeModel)
@@ -45,5 +46,7 @@ class ProductManufactureAdmin(admin.ModelAdmin):
     list_display = ('name', 'created_at')
     search_fields = ('name', 'created_at')
     list_filter = ('created_at',)
+
+
 
 

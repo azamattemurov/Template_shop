@@ -8,10 +8,11 @@ admin.site.index_title = "Hush kelibsiz !..."
 
 urlpatterns = ([
                    path('admin/', admin.site.urls),
-                    path('blogs/', include('blogs.urls', namespace='blogs')),
-                    path('products/', include('products.urls', namespace='products')),
-                    path('users/', include('users.urls', namespace='users')),
+                   path('blogs/', include('blogs.urls', namespace='blogs')),
+                   path('products/', include('products.urls', namespace='products')),
+                   path('users/', include('users.urls', namespace='users')),
                    path('', include('pages.urls', namespace='pages')),
+                   path('orders/', include('orders.urls', namespace='orders')),
                ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL,
                                                                                             document_root=settings.
                                                                                             MEDIA_ROOT))

@@ -1,5 +1,7 @@
 from django.shortcuts import redirect
-from django.views.generic import ListView, DetailView
+from django.urls import reverse_lazy
+from django.views.generic import ListView, DetailView, CreateView
+
 
 from products.models import ProductModel, ProductCategoryModel, ProductManufacture, ProductColor, ProductTagModel, \
     ProductSizeModel
@@ -17,6 +19,8 @@ class ProductListView(ListView):
         tag = self.request.GET.get('tag')
         man = self.request.GET.get('man')
         col = self.request.GET.get('col')
+        sort = self.request.GET.get('sort')
+        q = self.request.GET.get('q')
 
         if cat:
             qs = qs.filter(categories__in=cat)
@@ -26,6 +30,18 @@ class ProductListView(ListView):
             qs = qs.filter(manufacture__in=man)
         if col:
             qs = qs.filter(color__in=col)
+        if sort:
+            if sort == '-price':
+                qs = qs.order_by('-real_price')
+            else:
+                qs = qs.order_by('real_price')
+        if sort:
+            if sort == 'title':
+                qs = qs.order_by('title')
+            else:
+                qs = qs.order_by('-title')
+        if q:
+            qs = qs.filter(title__icontains=q)
 
         return qs
 
@@ -63,4 +79,18 @@ def add_or_remove(request, pk):
         cart.append(pk)
     request.session['cart'] = cart
     return redirect(request.GET.get('next', 'products:list'))
+
+
+def add_or_r(request, pk):
+    wishlist = request.session.get('wishlist', [])
+    if pk in wishlist:
+        wishlist.remove(pk)
+    else:
+        wishlist.append(pk)
+    request.session['wishlist'] = wishlist
+    return redirect(request.GET.get('next', 'products:list'))
+
+
+
+
 

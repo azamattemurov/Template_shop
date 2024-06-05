@@ -53,9 +53,11 @@
 
         {% elif '/users/account/' == request.path %}
             class = "user-acount"
-        {% elif '/users/wishlist/' in request.path %}
+        {% elif '/users/wishlist' in request.path %}
             class="user-wishlist blog"
-        {% elif '/users/checkout/' in request.path %}
+        {% elif '/orders/history' in request.path %}
+            class="user-wishlist blog"
+        {% elif '/orders/checkout/' in request.path %}
             class="product-checkout checkout-cart"
         {% elif '/users/register/' == request.path %}
             class="user-register blog"

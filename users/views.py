@@ -147,13 +147,15 @@ class CartView(ListView):
         return context
 
 
-class CheckoutView(TemplateView):
-    template_name = 'products/checkout.html'
+class WishlistView(TemplateView):
+    template_name = 'users/wishlist.html'
+    context_object_name = 'products'
+
+    def get_queryset(self):
+        wishlist = self.request.session.get('wishlist', [])
+        products = ProductModel.objects.filter(pk__in=wishlist)
+        return products
 
 
 class ChangePasswordView(TemplateView):
     template_name = 'users/reset-password.html'
-
-
-class WishlistView(TemplateView):
-    template_name = 'users/wishlist.html'
