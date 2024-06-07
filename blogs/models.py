@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.translation import gettext_lazy as _
 
 
 class AuthorModel(models.Model):
@@ -16,9 +17,8 @@ class AuthorModel(models.Model):
         return self.name
 
     class Meta:
-        ordering = ['position']
-        verbose_name = 'Author'
-        verbose_name_plural = 'Authors'
+        verbose_name = _('Author')
+        verbose_name_plural = _('Authors')
 
 
 class BlogCategoryModel(models.Model):
@@ -32,9 +32,9 @@ class BlogCategoryModel(models.Model):
         return self.name
 
     class Meta:
-        ordering = ['name']
-        verbose_name = 'Category'
-        verbose_name_plural = 'Categories'
+        verbose_name = _('Category')
+        verbose_name_plural = _('Categories')
+
 
 class BlogTagModel(models.Model):
     objects = None
@@ -47,9 +47,8 @@ class BlogTagModel(models.Model):
         return self.name
 
     class Meta:
-        ordering = ['name']
-        verbose_name = 'tag'
-        verbose_name_plural = 'tags'
+        verbose_name = _('tag')
+        verbose_name_plural = _('tags')
 
 
 class BlogModel(models.Model):
@@ -69,7 +68,5 @@ class BlogModel(models.Model):
         return self.title
 
     class Meta:
-        ordering = ['title']
         verbose_name = 'Blog'
-        verbose_name_plural = 'Blogs'
-
+        verbose_name_plural = _('Blogs')

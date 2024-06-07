@@ -24,7 +24,8 @@ class BlogListView(ListView):
         context = super().get_context_data(**kwargs)
         context['categories'] = BlogCategoryModel.objects.all()
         context['tags'] = BlogTagModel.objects.all()
-        context['famous_blogs'] = BlogModel.objects.all().order_by('-created_at')[:2]
+        context['famous_blogs'] = BlogModel.objects.all().order_by('-created_at')
+        context["related_blogs"]= BlogModel.objects.all().order_by('-created_at')
 
         return context
 
