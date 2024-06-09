@@ -116,19 +116,6 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = 'en'
-MODELTRANSLATION_DEFAULT_LANGUAGE = 'en'
-
-LANGUAGES = [
-    ('en', 'English'),
-    ('uz', 'Uzbek'),
-]
-
-LOCALE_PATHS = (BASE_DIR / 'locale',)
-
-gettext = lambda s: s
-TIME_ZONE = 'Asia/Tashkent'
-SITE_ID = 1
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
@@ -139,6 +126,17 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.static',
     'django.contrib.messages.context_processors.messages',
 )
+LANGUAGE_CODE = 'en'
+MODELTRANSLATION_DEFAULT_LANGUAGE = 'en'
+
+LANGUAGES = [
+    ('en', 'English'),
+    ('uz', 'Uzbek'),
+]
+
+LOCALE_PATHS = (BASE_DIR / 'locale',)
+
+TIME_ZONE = 'Asia/Tashkent'
 
 USE_I18N = True
 
