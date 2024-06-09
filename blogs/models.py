@@ -3,7 +3,6 @@ from django.utils.translation import gettext_lazy as _
 
 
 class AuthorModel(models.Model):
-    objects = None
     name = models.CharField(max_length=100)
     image = models.ImageField(upload_to='blog-authors')
     about = models.TextField()
@@ -22,7 +21,6 @@ class AuthorModel(models.Model):
 
 
 class BlogCategoryModel(models.Model):
-    objects = None
     name = models.CharField(max_length=100)
 
     created_at = models.DateTimeField(auto_now_add=True)
@@ -37,7 +35,6 @@ class BlogCategoryModel(models.Model):
 
 
 class BlogTagModel(models.Model):
-    objects = None
     name = models.CharField(max_length=100)
 
     created_at = models.DateTimeField(auto_now_add=True)
@@ -52,7 +49,6 @@ class BlogTagModel(models.Model):
 
 
 class BlogModel(models.Model):
-    objects = None
     title = models.CharField(max_length=100)
     image = models.ImageField(upload_to='blog-images')
     short_info = models.TextField(null=True)

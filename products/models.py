@@ -5,7 +5,6 @@ from django.utils.translation import gettext_lazy as _
 
 
 class ProductCategoryModel(models.Model):
-    objects = None
     name = models.CharField(max_length=100)
 
     created_at = models.DateTimeField(auto_now_add=True)
@@ -21,7 +20,6 @@ class ProductCategoryModel(models.Model):
 
 
 class ProductTagModel(models.Model):
-    objects = None
     name = models.CharField(max_length=100)
 
     created_at = models.DateTimeField(auto_now_add=True)
@@ -37,7 +35,6 @@ class ProductTagModel(models.Model):
 
 
 class ProductColor(models.Model):
-    objects = None
     name = models.CharField(max_length=100)
     code = models.CharField(max_length=7)
 
@@ -54,7 +51,6 @@ class ProductColor(models.Model):
 
 
 class ProductSizeModel(models.Model):
-    objects = None
     name = models.CharField(max_length=100)
 
     created_at = models.DateTimeField(auto_now_add=True)
@@ -70,7 +66,6 @@ class ProductSizeModel(models.Model):
 
 
 class ProductManufacture(models.Model):
-    objects = None
     name = models.CharField(max_length=100)
     logo = models.ImageField(null=True, blank=True, upload_to='logo')
     created_at = models.DateTimeField(auto_now_add=True)
@@ -86,7 +81,6 @@ class ProductManufacture(models.Model):
 
 
 class ProductModel(models.Model):
-    objects = None
     image = models.ImageField(upload_to='products/')
     image1 = models.ImageField(upload_to='products/')
 
@@ -147,7 +141,6 @@ UserModel = get_user_model()
 
 
 class ProductCommentModel(models.Model):
-    objects = None
     product = models.ForeignKey(ProductModel, on_delete=models.CASCADE, related_name='comments')
     user = models.ForeignKey(UserModel, on_delete=models.CASCADE, related_name='comments')
     message = models.TextField()
