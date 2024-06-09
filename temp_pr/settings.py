@@ -47,7 +47,6 @@ INSTALLED_APPS = [
     'products',
     'users',
     'orders',
-
 ]
 
 MIDDLEWARE = [
@@ -116,7 +115,6 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
     'django.core.context_processors.debug',
@@ -174,3 +172,11 @@ LOGIN_URL = 'users/login/'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
+# Add this block to your settings file
+TRANSLATABLE_MODEL_MODULES = [
+    'pages.models',
+    'blogs.models',
+    'products.models',
+    'users.models',
+    'orders.models',
+]
