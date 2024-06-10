@@ -6,7 +6,7 @@ from django.views.generic import ListView, DetailView, CreateView
 
 from products.forms import ProductCommentForm
 from products.models import ProductModel, ProductCategoryModel, ProductManufacture, ProductColor, ProductTagModel, \
-    ProductSizeModel, ProductCommentModel
+ ProductCommentModel
 
 
 class ProductListView(ListView):

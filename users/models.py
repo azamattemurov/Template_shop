@@ -1,12 +1,7 @@
 from django.contrib.auth import get_user_model
 from django.db import models
 from django.utils.translation import gettext_lazy as _
-from django.utils.functional import lazy
-from django.conf import settings
-
-from temp_pr.settings import AUTH_USER_MODEL
-
-UserModel = lazy(get_user_model, AUTH_USER_MODEL)
+UserModel = get_user_model()
 
 
 class VerificationCodeModel(models.Model):

@@ -10,15 +10,11 @@ import random
 
 from products.models import ProductModel
 from temp_pr import settings
-from temp_pr.settings import AUTH_USER_MODEL
 from users.models import VerificationCodeModel, AccountModel
 
 from users.forms import RegisterForm, EmailVerificationForm, LoginForm, AccountModelForm
 
-from django.utils.functional import lazy
-from django.conf import settings
-
-UserModel = lazy(get_user_model, AUTH_USER_MODEL)
+UserModel = get_user_model()
 
 
 def send_email_verification(user):

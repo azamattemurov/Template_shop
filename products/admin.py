@@ -37,10 +37,7 @@ class ProductTagModelAdmin(TranslationAdmin):
             'screen': ('modeltranslation/css/tabbed_translation_fields.css',),
         }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 042e58711c9a9b66549bbe4d5145d950d8f453c7
 class ProductImageModelAdmin(admin.StackedInline):
     model = ProductImageModel
 
@@ -116,17 +113,10 @@ class ProductManufactureAdmin(TranslationAdmin):
 
 
 @admin.register(ProductCommentModel)
-<<<<<<< HEAD
 class ProductCommentAdmin(TranslationAdmin):
     list_display = ['id', 'message', 'updated_at']
     search_fields = ['message']
     list_filter = ['created_at','updated_at']
-=======
-class ProductCommentModelAdmin(TranslationAdmin):
-    list_display = ('user', 'created_at')
-    search_fields = ('message', 'created_at')
-    list_filter = ('created_at',)
->>>>>>> 042e58711c9a9b66549bbe4d5145d950d8f453c7
 
     class Media:
         js = (
