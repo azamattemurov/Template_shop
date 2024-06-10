@@ -3,7 +3,11 @@ from django.shortcuts import redirect
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView
 
+<<<<<<< HEAD
 from products.forms import ProductCommentForm
+=======
+from products.forms import ProductsCommentModelForm
+>>>>>>> 042e58711c9a9b66549bbe4d5145d950d8f453c7
 from products.models import ProductModel, ProductCategoryModel, ProductManufacture, ProductColor, ProductTagModel, \
     ProductSizeModel, ProductCommentModel
 
@@ -70,8 +74,12 @@ class ProductDetailView(DetailView):
             'color': ProductColor.objects.all(),
             'tags': ProductTagModel.objects.all(),
             'product': ProductModel.objects.all(),
+<<<<<<< HEAD
             'comments': ProductCommentModel.objects.filter(product=self.object),
 
+=======
+            'comments': ProductCommentModel.objects.filter(product=product),
+>>>>>>> 042e58711c9a9b66549bbe4d5145d950d8f453c7
         })
 
         return content
@@ -88,6 +96,7 @@ def add_or_remove(request, pk):
 
 
 class ProductCommentView(LoginRequiredMixin, CreateView):
+    #SSS
     template_name = 'products/products-detail.html'  # Sizning HTML templateingiz
     form_class = ProductCommentForm
     login_url = reverse_lazy('users:login')
@@ -106,4 +115,23 @@ class ProductCommentView(LoginRequiredMixin, CreateView):
 
     def get_success_url(self):
         return redirect(self.request.GET.get('next', 'products:list'))
+=======
+    template_name = 'products/products-detail.html'
+    form_class = ProductsCommentModelForm
+    login_url = reverse_lazy('users:login')
 
+    def form_valid(self, form):
+        product_id = self.kwargs['pk']
+        product = ProductModel.objects.get(pk=product_id)
+        comment = form.save(commit=False)
+        comment.user = self.request.user
+        comment.product = product
+        comment.save()
+        return self.get_success_url()
+
+    def form_invalid(self, form):
+        return self.get_success_url()
+>>>>>>> 042e58711c9a9b66549bbe4d5145d950d8f453c7
+
+    def get_success_url(self):
+        return redirect(self.request.GET.get('next', 'products:list'))

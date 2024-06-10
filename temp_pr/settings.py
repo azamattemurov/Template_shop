@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+<<<<<<< HEAD
+=======
+from decouple import config
+>>>>>>> 042e58711c9a9b66549bbe4d5145d950d8f453c7
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,12 +27,16 @@ STATIC_DIR = os.path.join(BASE_DIR, 'static')
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-!c41y(*7%3m84j$nk*b*t3u8z1w4h8+2ojpp+b(%+8^q0^1wz#'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+<<<<<<< HEAD
 ALLOWED_HOSTS = []
+=======
+ALLOWED_HOSTS = ['*']
+>>>>>>> 042e58711c9a9b66549bbe4d5145d950d8f453c7
 
 # Application definition
 
@@ -46,7 +54,6 @@ INSTALLED_APPS = [
     'products',
     'users',
     'orders',
-
 ]
 
 MIDDLEWARE = [
@@ -85,8 +92,12 @@ WSGI_APPLICATION = 'temp_pr.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': config('DB_NAME'),
+        'HOST': config('DB_HOST'),
+        'PORT': config('DB_PORT'),
+        'USER': config('DB_USER'),
+        'PASS': config('DB_PASS'),
     }
 }
 
@@ -111,7 +122,21 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
+<<<<<<< HEAD
 LANGUAGE_CODE = 'en'
+=======
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.debug',
+    'django.core.context_processors.i18n',
+    # this one
+    'django.core.context_processors.request',
+    'django.core.context_processors.static',
+    'django.contrib.messages.context_processors.messages',
+)
+LANGUAGE_CODE = 'en'
+MODELTRANSLATION_DEFAULT_LANGUAGE = 'en'
+>>>>>>> 042e58711c9a9b66549bbe4d5145d950d8f453c7
 
 LANGUAGES = [
     ('en', 'English'),
@@ -119,7 +144,10 @@ LANGUAGES = [
 ]
 
 LOCALE_PATHS = (BASE_DIR / 'locale',)
+<<<<<<< HEAD
 
+=======
+>>>>>>> 042e58711c9a9b66549bbe4d5145d950d8f453c7
 
 TIME_ZONE = 'Asia/Tashkent'
 
@@ -160,8 +188,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587  # For TLS
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'sotvoldiyevazamat193@gmail.com'  # Your Gmail address
-EMAIL_HOST_PASSWORD = 'muvx siht enrr gcym'  # Your Gmail password or App Password if 2-step verification is enabled
+EMAIL_HOST_USER = config('EMAIL_USER')  # Your Gmail address
+EMAIL_HOST_PASSWORD = config('EMAIL_PASS')  # Your Gmail password or App Password if 2-step verification is enabled
 
 # Optional: If you want to specify a 'From' address for outgoing emails
 DEFAULT_FROM_EMAIL = 'sotvoldiyevazamat193@gmail.com'
@@ -169,3 +197,15 @@ DEFAULT_FROM_EMAIL = 'sotvoldiyevazamat193@gmail.com'
 LOGIN_URL = 'users/login/'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+<<<<<<< HEAD
+=======
+
+# Add this block to your settings file
+TRANSLATABLE_MODEL_MODULES = [
+    'pages.models',
+    'blogs.models',
+    'products.models',
+    'users.models',
+    'orders.models',
+]
+>>>>>>> 042e58711c9a9b66549bbe4d5145d950d8f453c7

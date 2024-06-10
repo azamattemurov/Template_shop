@@ -49,3 +49,4 @@ class BlogDetailView(DetailView):
         }
         return context
 
+
