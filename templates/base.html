@@ -40,39 +40,56 @@
 </head>
 
 <body
-        {% if '/blogs/' == request.path %}
+        {% url 'blogs:list' as blog_url %}
+         {% url 'products:list' as product_url %}
+         {% url 'pages:contact' as contact_url %}
+         {% url 'users:account' as user_account_url %}
+         {% url 'users:login' as user_login_url %}
+         {% url 'users:wishlist' as user_wishlist_url %}
+         {% url 'orders:history' as order_history %}
+         {% url 'orders:checkout' as order_checkout %}
+         {% url 'users:register' as user_register %}
+         {% url 'users:cart' as user_cart %}
+         {% url 'users:verify-email' as verify_email %}
+
+
+
+
+
+        {% if blog_url == request.path %}
             id="blog-list-sidebar-left" class="blog"
-        {% elif '/products/' == request.path %}
+        {% elif product_url == request.path %}
             id="product-sidebar-left" class="product-grid-sidebar-left"
-        {% elif 'contact' in request.path %}
+        {% elif contact_url in request.path %}
             id="contact" class="blog"
         {% elif 'blogs/detail/' in request.path %}
             id="blog-detail" class="blog"
         {% elif 'products/detail/' in request.path %}
             id="product-detail"
 
-        {% elif '/users/account/' == request.path %}
+        {% elif user_account_url == request.path %}
             class = "user-acount"
-        {% elif '/users/wishlist' in request.path %}
+        {% elif user_wishlist_url in request.path %}
             class="user-wishlist blog"
-        {% elif '/orders/history' in request.path %}
+        {% elif order_history in request.path %}
             class="user-wishlist blog"
-        {% elif '/orders/checkout/' in request.path %}
+        {% elif order_checkout in request.path %}
             class="product-checkout checkout-cart"
-        {% elif '/users/register/' == request.path %}
+        {% elif user_register == request.path %}
             class="user-register blog"
-        {% elif '/users/verify/email' == request.path %}
+        {% elif verify_email == request.path %}
             class="user-register blog"
-        {% elif '/users/login/' == request.path %}
+        {% elif user_login_url == request.path %}
             class="user-login blog"
         {% elif '/users/reset-password' == request.path %}
             class="user-reset-password blog"
-        {% elif '/users/cart/' == request.path %}
+        {% elif user_cart == request.path %}
            class="product-cart checkout-cart blog"
         {% endif %}
 
 
     {% include 'layouts/header-base.html' %}
+    
 
     <!-- main content -->
     {% block content %}

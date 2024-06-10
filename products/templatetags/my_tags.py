@@ -2,6 +2,7 @@ from django import template
 from django.db.models import Sum
 
 from products.models import ProductModel
+from temp_pr import settings
 
 register = template.Library()
 
@@ -25,6 +26,7 @@ def get_cart_total(request):
     total = ProductModel.objects.filter(pk__in=cart).aggregate(total_price=Sum('real_price'))['total_price']
     return total if total is not None else 0
 
+
 @register.filter
 def get_user_wishlist(request):
     cart = request.session.get('wishlist', [])
@@ -36,3 +38,11 @@ def get_user_wishlist(request):
 @register.filter
 def in_wishlist(product, request):
     return product.pk in request.session.get('wishlist', [])
+
+
+@register.simple_tag
+def get_lang_url(request, lang):
+    url = request.path.split('/')
+    url[1] = lang
+    return '/'.join(url)
+

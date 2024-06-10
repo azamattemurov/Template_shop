@@ -1,0 +1,645 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-06-07 23:32+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\blogs\models.py:20
+msgid "Author"
+msgstr ""
+
+#: .\blogs\models.py:21
+msgid "Authors"
+msgstr ""
+
+#: .\blogs\models.py:35 .\products\models.py:19
+msgid "Category"
+msgstr ""
+
+#: .\blogs\models.py:36 .\products\models.py:20
+#: .\templates\blogs\blog-detail.html:42 .\templates\blogs\blog-list.html:36
+#: .\templates\products\product-list.html:42
+#: .\templates\products\products-detail.html:43
+#: .\templates\products\products-detail.html:304
+msgid "Categories"
+msgstr ""
+
+#: .\blogs\models.py:50 .\products\models.py:35
+msgid "tag"
+msgstr ""
+
+#: .\blogs\models.py:51 .\products\models.py:36
+#: .\templates\products\products-detail.html:311
+msgid "tags"
+msgstr ""
+
+#: .\blogs\models.py:72
+msgid "Blogs"
+msgstr ""
+
+#: .\orders\models.py:21
+msgid "Order"
+msgstr ""
+
+#: .\orders\models.py:22
+msgid "Orders"
+msgstr ""
+
+#: .\orders\models.py:39
+msgid "Order item"
+msgstr ""
+
+#: .\orders\models.py:40
+msgid "Orders items"
+msgstr ""
+
+#: .\pages\models.py:17
+msgid "info"
+msgstr ""
+
+#: .\pages\models.py:18
+msgid "infos"
+msgstr ""
+
+#: .\products\models.py:52 .\templates\products\products-detail.html:225
+#: .\templates\users\cart.html:62
+msgid "color"
+msgstr ""
+
+#: .\products\models.py:53
+msgid "colors"
+msgstr ""
+
+#: .\products\models.py:68 .\templates\products\products-detail.html:215
+#: .\templates\users\cart.html:58
+msgid "size"
+msgstr ""
+
+#: .\products\models.py:69
+msgid "sizes"
+msgstr ""
+
+#: .\products\models.py:84
+msgid "manufacture"
+msgstr ""
+
+#: .\products\models.py:85 .\templates\products\product-list.html:53
+msgid "manufactures"
+msgstr ""
+
+#: .\products\models.py:129
+msgid "product"
+msgstr ""
+
+#: .\products\models.py:130
+msgid "products"
+msgstr ""
+
+#: .\products\models.py:142
+msgid "image"
+msgstr ""
+
+#: .\products\models.py:143
+msgid "images"
+msgstr ""
+
+#: .\products\models.py:162
+msgid "comment"
+msgstr ""
+
+#: .\products\models.py:163
+msgid "comments"
+msgstr ""
+
+#: .\templates\blogs\blog-detail.html:23
+msgid "List"
+msgstr ""
+
+#: .\templates\blogs\blog-detail.html:28
+#: .\templates\products\products-detail.html:29
+msgid "Detail"
+msgstr ""
+
+#: .\templates\blogs\blog-detail.html:54
+msgid "Recent Posts"
+msgstr ""
+
+#: .\templates\blogs\blog-detail.html:82
+msgid "Tags blog"
+msgstr ""
+
+#: .\templates\blogs\blog-detail.html:118
+msgid "Comments"
+msgstr ""
+
+#: .\templates\blogs\blog-detail.html:124
+#: .\templates\products\products-detail.html:260
+msgid "Share"
+msgstr ""
+
+#: .\templates\blogs\blog-detail.html:128
+msgid "Send to Friends"
+msgstr ""
+
+#: .\templates\blogs\blog-detail.html:132
+#: .\templates\products\products-detail.html:268
+msgid "Print"
+msgstr ""
+
+#: .\templates\blogs\blog-detail.html:155
+msgid "Related News"
+msgstr ""
+
+#: .\templates\blogs\blog-list.html:16 .\templates\contact.html:31
+#: .\templates\layouts\header-base.html:113
+#: .\templates\layouts\header-home.html:101
+#: .\templates\products\checkout.html:14
+#: .\templates\products\product-list.html:19
+#: .\templates\products\products-detail.html:19 .\templates\thank_you.html:37
+#: .\templates\users\cart.html:15 .\templates\users\wishlist.html:15
+#: .\templates\users\wishlist.html:92
+msgid "Home"
+msgstr ""
+
+#: .\templates\blogs\blog-list.html:21
+msgid "Blogs list"
+msgstr ""
+
+#: .\templates\blogs\blog-list.html:48
+msgid "Recent Post"
+msgstr ""
+
+#: .\templates\blogs\blog-list.html:65
+msgid "READ MORE"
+msgstr ""
+
+#: .\templates\blogs\blog-list.html:77
+msgid "Blog Tags"
+msgstr ""
+
+#: .\templates\blogs\blog-list.html:93
+msgid "Recent"
+msgstr ""
+
+#: .\templates\blogs\blog-list.html:113
+msgid "view more"
+msgstr ""
+
+#: .\templates\blogs\blog-list.html:119
+msgid "RELATED NEWS"
+msgstr ""
+
+#: .\templates\blogs\blog-list.html:146
+#: .\templates\products\product-list.html:296
+msgid "Previous"
+msgstr ""
+
+#: .\templates\blogs\blog-list.html:160
+#: .\templates\products\product-list.html:308
+msgid "Next"
+msgstr ""
+
+#: .\templates\contact.html:36 .\templates\contact.html:46
+#: .\templates\contact.html:114 .\templates\layouts\footer.html:57
+#: .\templates\layouts\footer.html:83 .\templates\layouts\header-base.html:122
+#: .\templates\layouts\header-home.html:111
+msgid "Contact"
+msgstr ""
+
+#: .\templates\contact.html:73 .\templates\products\checkout.html:49
+msgid "Address"
+msgstr ""
+
+#: .\templates\contact.html:75
+msgid "Tashkent/Uzb"
+msgstr ""
+
+#: .\templates\contact.html:88
+msgid "Hotline"
+msgstr ""
+
+#: .\templates\contact.html:130
+msgid "Send message"
+msgstr ""
+
+#: .\templates\home.html:95
+msgid "Modern"
+msgstr ""
+
+#: .\templates\home.html:95
+msgid "Designer"
+msgstr ""
+
+#: .\templates\home.html:95
+msgid "Chair"
+msgstr ""
+
+#: .\templates\home.html:104 .\templates\home.html:114
+msgid "Furniture"
+msgstr ""
+
+#: .\templates\home.html:105 .\templates\home.html:115
+msgid "Design"
+msgstr ""
+
+#: .\templates\home.html:157
+msgid "Living Room"
+msgstr ""
+
+#: .\templates\home.html:161
+msgid "New Arrivals"
+msgstr ""
+
+#: .\templates\home.html:164
+msgid " Best Seller"
+msgstr ""
+
+#: .\templates\home.html:167
+msgid "Featured"
+msgstr ""
+
+#: .\templates\home.html:688
+msgid "Deal Of The Day"
+msgstr ""
+
+#: .\templates\home.html:689
+msgid "Hurry Up, The Same Time Is Not Extended !!!"
+msgstr ""
+
+#: .\templates\home.html:1000
+msgid "Newsletter"
+msgstr ""
+
+#: .\templates\home.html:1001
+msgid ""
+"Sign up to our newsletter to get the latest articles, lookbooks voucher "
+"codes direct to your inbox"
+msgstr ""
+
+#: .\templates\layouts\footer.html:14
+msgid ""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod "
+"tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim"
+msgstr ""
+
+#: .\templates\layouts\footer.html:23
+msgid " WHO WE ARE"
+msgstr ""
+
+#: .\templates\layouts\footer.html:27
+msgid "About Us"
+msgstr ""
+
+#: .\templates\layouts\footer.html:30
+msgid "Reasons to shop"
+msgstr ""
+
+#: .\templates\layouts\footer.html:33
+msgid "What our customers say"
+msgstr ""
+
+#: .\templates\layouts\footer.html:36
+msgid "Meet the teaml"
+msgstr ""
+
+#: .\templates\layouts\footer.html:39
+msgid "Contact our buyers"
+msgstr ""
+
+#: .\templates\layouts\footer.html:42
+msgid "Cookies & privacy"
+msgstr ""
+
+#: .\templates\layouts\footer.html:53
+msgid "CUSTOMER SERVICES"
+msgstr ""
+
+#: .\templates\layouts\footer.html:60
+msgid "Help and advice"
+msgstr ""
+
+#: .\templates\layouts\footer.html:63
+msgid "Delivery"
+msgstr ""
+
+#: .\templates\layouts\footer.html:66
+msgid "Terms and conditions"
+msgstr ""
+
+#: .\templates\layouts\footer.html:69
+msgid "Refund Policy"
+msgstr ""
+
+#: .\templates\layouts\footer.html:72
+msgid "FAQs"
+msgstr ""
+
+#: .\templates\layouts\footer.html:89
+msgid "Showroom"
+msgstr ""
+
+#: .\templates\layouts\footer.html:89
+msgid "Suspendis matti, Visaosang Building"
+msgstr ""
+
+#: .\templates\layouts\footer.html:95
+msgid "Opening Hours"
+msgstr ""
+
+#: .\templates\layouts\header-base.html:119
+#: .\templates\layouts\header-home.html:108
+#: .\templates\products\product-list.html:24
+#: .\templates\products\product-list.html:113
+#: .\templates\products\products-detail.html:24
+msgid "Products"
+msgstr ""
+
+#: .\templates\layouts\header-base.html:133
+msgid "Search"
+msgstr ""
+
+#: .\templates\layouts\header-base.html:156
+#: .\templates\layouts\header-home.html:125
+#: .\templates\layouts\header-home.html:136
+msgid "My Account"
+msgstr ""
+
+#: .\templates\layouts\header-base.html:162
+msgid " My Orders"
+msgstr ""
+
+#: .\templates\layouts\header-base.html:170
+#: .\templates\layouts\header-home.html:145
+msgid "Log out"
+msgstr ""
+
+#: .\templates\layouts\header-base.html:175
+msgid "Log in"
+msgstr ""
+
+#: .\templates\layouts\header-base.html:182
+#: .\templates\layouts\header-base.html:257
+#: .\templates\layouts\header-home.html:79
+#: .\templates\layouts\header-home.html:157
+#: .\templates\layouts\header-home.html:347
+#: .\templates\products\checkout.html:19
+msgid "Checkout"
+msgstr ""
+
+#: .\templates\layouts\header-base.html:188
+#: .\templates\layouts\header-home.html:164 .\templates\users\wishlist.html:20
+#: .\templates\users\wishlist.html:38
+msgid "My Wishlists"
+msgstr ""
+
+#: .\templates\layouts\header-base.html:250 .\templates\users\cart.html:76
+#: .\templates\users\cart.html:109 .\templates\users\cart.html:123
+msgid "Total"
+msgstr ""
+
+#: .\templates\layouts\header-base.html:256
+#: .\templates\layouts\header-home.html:78
+#: .\templates\layouts\header-home.html:346
+msgid "View Cart"
+msgstr ""
+
+#: .\templates\layouts\header-home.html:72
+#: .\templates\layouts\header-home.html:340
+msgid "Total:"
+msgstr ""
+
+#: .\templates\layouts\header-home.html:104
+msgid "Blog"
+msgstr ""
+
+#: .\templates\layouts\header-home.html:152
+msgid "Register Account"
+msgstr ""
+
+#: .\templates\layouts\header-home.html:273
+msgid "FREE DELIVERY"
+msgstr ""
+
+#: .\templates\layouts\header-home.html:274
+msgid "From $ 250"
+msgstr ""
+
+#: .\templates\layouts\header-home.html:286
+msgid "MONEY BACK"
+msgstr ""
+
+#: .\templates\layouts\header-home.html:287
+msgid "GUARANTEED"
+msgstr ""
+
+#: .\templates\products\checkout.html:37
+msgid "PERSONAL INFORMATION"
+msgstr ""
+
+#: .\templates\products\checkout.html:52
+msgid "Phone"
+msgstr ""
+
+#: .\templates\products\checkout.html:61 .\templates\users\cart.html:98
+msgid "Continue"
+msgstr ""
+
+#: .\templates\products\checkout.html:76 .\templates\users\cart.html:133
+msgid "Security policy"
+msgstr ""
+
+#: .\templates\products\checkout.html:82 .\templates\users\cart.html:139
+msgid "Decurity policy"
+msgstr ""
+
+#: .\templates\products\checkout.html:88 .\templates\users\cart.html:145
+msgid "Return policy"
+msgstr ""
+
+#: .\templates\products\product-list.html:66
+msgid "By Price"
+msgstr ""
+
+#: .\templates\products\product-list.html:81
+msgid "Colors"
+msgstr ""
+
+#: .\templates\products\product-list.html:99
+#: .\templates\products\products-detail.html:105
+msgid "Tags"
+msgstr ""
+
+#: .\templates\products\product-list.html:126 .\templates\users\cart.html:105
+msgid "There are product"
+msgstr ""
+
+#: .\templates\products\product-list.html:133
+msgid "Sort by"
+msgstr ""
+
+#: .\templates\products\product-list.html:134
+msgid "Name, A to Z"
+msgstr ""
+
+#: .\templates\products\product-list.html:135
+msgid "Name, Z to A"
+msgstr ""
+
+#: .\templates\products\product-list.html:136
+msgid "Price, low to high"
+msgstr ""
+
+#: .\templates\products\product-list.html:137
+msgid "Price, high to low"
+msgstr ""
+
+#: .\templates\products\product-list.html:233
+msgid "In Stock"
+msgstr ""
+
+#: .\templates\products\product-list.html:263
+#: .\templates\products\products-detail.html:246
+msgid "Add to card"
+msgstr ""
+
+#: .\templates\products\product-list.html:289
+msgid "SHOWING 1-3 OF 3 ITEM(S)"
+msgstr ""
+
+#: .\templates\products\products-detail.html:63
+msgid "NEWS PRODUCTS"
+msgstr ""
+
+#: .\templates\products\products-detail.html:199
+msgid "Availability"
+msgstr ""
+
+#: .\templates\products\products-detail.html:203
+msgid "IN STOCK"
+msgstr ""
+
+#: .\templates\products\products-detail.html:207
+msgid " NOT IN STOCK"
+msgstr ""
+
+#: .\templates\products\products-detail.html:264
+msgid "SEN TO A FRIEND"
+msgstr ""
+
+#: .\templates\products\products-detail.html:274
+msgid "REVIEW"
+msgstr ""
+
+#: .\templates\products\products-detail.html:288
+msgid "READ REVIEWS (3)"
+msgstr ""
+
+#: .\templates\products\products-detail.html:294
+msgid "WRITE A REVIEW"
+msgstr ""
+
+#: .\templates\products\products-detail.html:326
+msgid "Description"
+msgstr ""
+
+#: .\templates\products\products-detail.html:329
+msgid "Reviews"
+msgstr ""
+
+#: .\templates\products\products-detail.html:363
+msgid "Messages"
+msgstr ""
+
+#: .\templates\products\products-detail.html:368
+msgid "Submit"
+msgstr ""
+
+#: .\templates\products\products-detail.html:377
+msgid "Soon News"
+msgstr ""
+
+#: .\templates\thank_you.html:31
+msgid "Email sent successfully!"
+msgstr ""
+
+#: .\templates\thank_you.html:33
+msgid "You will get an answer soon..."
+msgstr ""
+
+#: .\templates\users\cart.html:20 .\templates\users\cart.html:33
+msgid "Shopping Cart"
+msgstr ""
+
+#: .\templates\users\cart.html:63
+msgid "blue"
+msgstr ""
+
+#: .\templates\users\cart.html:115
+msgid "Total Shipping"
+msgstr ""
+
+#: .\templates\users\cart.html:117
+msgid "Free"
+msgstr ""
+
+#: .\templates\users\wishlist.html:42 .\templates\users\wishlist.html:53
+msgid "Name"
+msgstr ""
+
+#: .\templates\users\wishlist.html:44
+msgid "Save"
+msgstr ""
+
+#: .\templates\users\wishlist.html:55
+msgid "Viewed"
+msgstr ""
+
+#: .\templates\users\wishlist.html:56
+msgid "Created"
+msgstr ""
+
+#: .\templates\users\wishlist.html:57
+msgid "Direct Link"
+msgstr ""
+
+#: .\templates\users\wishlist.html:58
+msgid "Default"
+msgstr ""
+
+#: .\templates\users\wishlist.html:59 .\templates\users\wishlist.html:82
+msgid "Delete"
+msgstr ""
+
+#: .\templates\users\wishlist.html:74
+msgid "View"
+msgstr ""
+
+#: .\users\models.py:16
+msgid "Verification Code"
+msgstr ""
+
+#: .\users\models.py:17
+msgid "Verification Codes"
+msgstr ""
+
+#: .\users\models.py:34
+msgid "Account"
+msgstr ""
+
+#: .\users\models.py:35
+msgid "Accounts"
+msgstr ""

@@ -1,3 +1,4 @@
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,12 +28,13 @@
 </head>
 <body>
     <div class="container">
-        <h1>Email sent successfully!</h1>
-        <p style="text-align: center">Tez orada javob olasiz ...</p>
+        <h1>{% trans 'Email sent successfully!' %}</h1>
+        <p style="text-align: center">
+                {% trans 'You will get an answer soon...' %}</p>
     </div>
         <a href="../../contact" style="color: white">
             <button class="btn back-to-top" style="margin-left: 770px; margin-top: 500px; width: 100px; height: 33px">
-                Back Home
+                {% trans 'Home' %}
             </button>
         </a>
 </body>
