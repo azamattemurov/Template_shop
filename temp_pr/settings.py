@@ -12,10 +12,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
-<<<<<<< HEAD
-=======
 from decouple import config
->>>>>>> 042e58711c9a9b66549bbe4d5145d950d8f453c7
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -32,11 +30,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-<<<<<<< HEAD
-ALLOWED_HOSTS = []
-=======
 ALLOWED_HOSTS = ['*']
->>>>>>> 042e58711c9a9b66549bbe4d5145d950d8f453c7
 
 # Application definition
 
@@ -54,6 +48,7 @@ INSTALLED_APPS = [
     'products',
     'users',
     'orders',
+
 ]
 
 MIDDLEWARE = [
@@ -94,10 +89,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
         'HOST': config('DB_HOST'),
         'PORT': config('DB_PORT'),
-        'USER': config('DB_USER'),
-        'PASS': config('DB_PASS'),
     }
 }
 
@@ -122,21 +117,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-<<<<<<< HEAD
 LANGUAGE_CODE = 'en'
-=======
-TEMPLATE_CONTEXT_PROCESSORS = (
-    'django.contrib.auth.context_processors.auth',
-    'django.core.context_processors.debug',
-    'django.core.context_processors.i18n',
-    # this one
-    'django.core.context_processors.request',
-    'django.core.context_processors.static',
-    'django.contrib.messages.context_processors.messages',
-)
-LANGUAGE_CODE = 'en'
-MODELTRANSLATION_DEFAULT_LANGUAGE = 'en'
->>>>>>> 042e58711c9a9b66549bbe4d5145d950d8f453c7
 
 LANGUAGES = [
     ('en', 'English'),
@@ -144,10 +125,7 @@ LANGUAGES = [
 ]
 
 LOCALE_PATHS = (BASE_DIR / 'locale',)
-<<<<<<< HEAD
 
-=======
->>>>>>> 042e58711c9a9b66549bbe4d5145d950d8f453c7
 
 TIME_ZONE = 'Asia/Tashkent'
 
@@ -197,15 +175,3 @@ DEFAULT_FROM_EMAIL = 'sotvoldiyevazamat193@gmail.com'
 LOGIN_URL = 'users/login/'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
-<<<<<<< HEAD
-=======
-
-# Add this block to your settings file
-TRANSLATABLE_MODEL_MODULES = [
-    'pages.models',
-    'blogs.models',
-    'products.models',
-    'users.models',
-    'orders.models',
-]
->>>>>>> 042e58711c9a9b66549bbe4d5145d950d8f453c7
