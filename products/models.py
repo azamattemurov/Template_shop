@@ -2,9 +2,16 @@ from django.contrib.auth import get_user_model
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from django.utils.functional import lazy
+from django.conf import settings
+
+from temp_pr.settings import AUTH_USER_MODEL
+
+UserModel = lazy(get_user_model, AUTH_USER_MODEL)
 
 
 class ProductCategoryModel(models.Model):
+    objects = None
     name = models.CharField(max_length=100)
 
     created_at = models.DateTimeField(auto_now_add=True)
@@ -20,6 +27,7 @@ class ProductCategoryModel(models.Model):
 
 
 class ProductTagModel(models.Model):
+    objects = None
     name = models.CharField(max_length=100)
 
     created_at = models.DateTimeField(auto_now_add=True)
@@ -35,6 +43,7 @@ class ProductTagModel(models.Model):
 
 
 class ProductColor(models.Model):
+    objects = None
     name = models.CharField(max_length=100)
     code = models.CharField(max_length=7)
 
@@ -51,6 +60,7 @@ class ProductColor(models.Model):
 
 
 class ProductSizeModel(models.Model):
+    objects = None
     name = models.CharField(max_length=100)
 
     created_at = models.DateTimeField(auto_now_add=True)
@@ -66,6 +76,7 @@ class ProductSizeModel(models.Model):
 
 
 class ProductManufacture(models.Model):
+    objects = None
     name = models.CharField(max_length=100)
     logo = models.ImageField(null=True, blank=True, upload_to='logo')
     created_at = models.DateTimeField(auto_now_add=True)
@@ -81,6 +92,7 @@ class ProductManufacture(models.Model):
 
 
 class ProductModel(models.Model):
+    objects = None
     image = models.ImageField(upload_to='products/')
     image1 = models.ImageField(upload_to='products/')
 
@@ -141,25 +153,14 @@ UserModel = get_user_model()
 
 
 class ProductCommentModel(models.Model):
-<<<<<<< HEAD
     user = models.ForeignKey(UserModel, on_delete=models.CASCADE, related_name='comments', null=True)
     product = models.ForeignKey(ProductModel, on_delete=models.CASCADE, related_name='comments')
     message = models.TextField(max_length=500)
-=======
-    product = models.ForeignKey(ProductModel, on_delete=models.CASCADE, related_name='comments')
-    user = models.ForeignKey(UserModel, on_delete=models.CASCADE, related_name='comments')
-    message = models.TextField()
-
->>>>>>> 042e58711c9a9b66549bbe4d5145d950d8f453c7
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-<<<<<<< HEAD
         return f"User: {self.user.username}"
-=======
-        return self.message
->>>>>>> 042e58711c9a9b66549bbe4d5145d950d8f453c7
 
     class Meta:
         verbose_name = _('comment')

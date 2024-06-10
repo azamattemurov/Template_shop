@@ -3,12 +3,12 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 from products.models import ProductModel
 
-try:
-    UserModel = get_user_model()
-except:
-    from django.conf import settings
+from django.utils.functional import lazy
+from django.conf import settings
 
-    UserModel = settings.AUTH_USER_MODEL
+from temp_pr.settings import AUTH_USER_MODEL
+
+UserModel = lazy(get_user_model, AUTH_USER_MODEL)
 
 
 # Create your models here.

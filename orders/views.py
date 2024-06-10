@@ -8,8 +8,13 @@ from django.views.generic import CreateView, TemplateView
 from orders.forms import OrderModelForm
 from orders.models import OrderModel, OrderItem
 from products.models import ProductModel
+from temp_pr.settings import AUTH_USER_MODEL
 from users.models import AccountModel
 
+from django.utils.functional import lazy
+from django.conf import settings
+
+UserModel = lazy(get_user_model, AUTH_USER_MODEL)
 
 class CheckoutView(TemplateView):
     template_name = 'products/checkout.html'
