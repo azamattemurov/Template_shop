@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e40ab0c3-fc76-4c60-a5a6-5b42859762aa" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/css/base/_body-element.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/base/_fonts.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/base/_normalize.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/base/_selection-colors.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/base/_vars.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/fonts/Montserrat-Black.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/fonts/Montserrat-Black.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/fonts/Montserrat-Black.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/fonts/Montserrat-Black.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/fonts/Montserrat-Bold.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/fonts/Montserrat-Bold.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/fonts/Montserrat-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/fonts/Montserrat-Bold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/fonts/Montserrat-Light.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/fonts/Montserrat-Light.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/fonts/Montserrat-Light.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/fonts/Montserrat-Light.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/fonts/Montserrat-Regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/fonts/Montserrat-Regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/fonts/Montserrat-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/fonts/Montserrat-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/layouts/_grid.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/main.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/modules/_about.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/modules/_contact.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/modules/_device-notification.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/modules/_header.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/modules/_hire.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/modules/_intro.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/modules/_outer-nav.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/modules/_section.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/modules/_side-nav.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/modules/_work.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/about-history.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/about-philosophy.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/about-visual.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/about-winners.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/contact-visual.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/dev.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/images.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/images.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/introduction-visual.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/work-victory.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/functions-min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/functions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/vendor/hammer-2.0.8.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/vendor/jquery-2.2.4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/translation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/translation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products/translation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/telegram_bot/dispatcher.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/telegram_bot/management/commands/set_webhook.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/telegram_bot/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/bot.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/layouts/products-detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/succes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Template_shop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Template_shop.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/other/contact_email.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/contact_email.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/other/contact_mess.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/contact_mess.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogs/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/blogs/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogs/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blogs/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogs/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blogs/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/templatetags/my_tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/templatetags/my_tags.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp_pr/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/temp_pr/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp_pr/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/temp_pr/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blogs/blog-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blogs/blog-detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blogs/blog-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blogs/blog-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layouts/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layouts/header-base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/header-base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layouts/header-home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/header-home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/products/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/products/checkout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/products/product-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/products/product-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/products/products-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/products/products-detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/thank_you.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users/wishlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/wishlist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;azamattemurov&quot;
+  }
+}</component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+  </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/azamattemurov/Template_shop.git&quot;,
+    &quot;accountId&quot;: &quot;fae37746-a0a0-4684-8a63-4e78aaf0c927&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2hmz2ysj3JGwfGR3sG0bmjGZo8U" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/PycharmProjects/clone_instagram&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\PycharmProjects\Template_shop" />
+      <recent name="C:\Users\user\PycharmProjects\Template_shop\assets\pdf" />
+      <recent name="C:\Users\user\PycharmProjects\Template_shop\assets\img" />
+      <recent name="C:\Users\user\PycharmProjects\Template_shop\assets" />
+      <recent name="C:\Users\user\PycharmProjects\Template_shop\assets\js\vendor" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Template_shop" type="Python.DjangoServer" factoryName="Django server">
+      <module name="Template_shop" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="localhost" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-babbdf50b680-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.15989.155" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e40ab0c3-fc76-4c60-a5a6-5b42859762aa" name="Changes" comment="" />
+      <created>1718213837686</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1718213837686</updated>
+      <workItem from="1718213838724" duration="3222000" />
+      <workItem from="1718217277377" duration="14000" />
+      <workItem from="1718223778707" duration="1416000" />
+      <workItem from="1718225295046" duration="3764000" />
+      <workItem from="1718233288356" duration="301000" />
+      <workItem from="1718881295121" duration="41000" />
+      <workItem from="1719397846879" duration="8000" />
+      <workItem from="1719662511239" duration="11000" />
+      <workItem from="1719663209815" duration="469000" />
+      <workItem from="1720346263344" duration="1232000" />
+      <workItem from="1720523693777" duration="43000" />
+      <workItem from="1720603867179" duration="27000" />
+      <workItem from="1720712402634" duration="46000" />
+      <workItem from="1720774783762" duration="71000" />
+      <workItem from="1720798034816" duration="65000" />
+      <workItem from="1721140517999" duration="677000" />
+      <workItem from="1721994794069" duration="257000" />
+      <workItem from="1721996216847" duration="1773000" />
+      <workItem from="1721998029932" duration="31000" />
+      <workItem from="1721998405448" duration="4757000" />
+      <workItem from="1722018743095" duration="6996000" />
+      <workItem from="1722026184980" duration="8275000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

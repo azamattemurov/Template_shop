@@ -1,5 +1,7 @@
+from django.contrib.auth import get_user_model
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
+from django.utils.translation import gettext_lazy as _
 
 
 class ProductCategoryModel(models.Model):
@@ -14,8 +16,8 @@ class ProductCategoryModel(models.Model):
 
     class Meta:
         ordering = ['name']
-        verbose_name = 'Category'
-        verbose_name_plural = 'Categories'
+        verbose_name = _('Category')
+        verbose_name_plural = _('Categories')
 
 
 class ProductTagModel(models.Model):
@@ -30,8 +32,8 @@ class ProductTagModel(models.Model):
 
     class Meta:
         ordering = ['name']
-        verbose_name = 'tag'
-        verbose_name_plural = 'tags'
+        verbose_name = _('tag')
+        verbose_name_plural = _('tags')
 
 
 class ProductColor(models.Model):
@@ -47,8 +49,8 @@ class ProductColor(models.Model):
 
     class Meta:
         ordering = ['name']
-        verbose_name = 'color'
-        verbose_name_plural = 'colors'
+        verbose_name = _('color')
+        verbose_name_plural = _('colors')
 
 
 class ProductSizeModel(models.Model):
@@ -63,8 +65,8 @@ class ProductSizeModel(models.Model):
 
     class Meta:
         ordering = ['name']
-        verbose_name = 'size'
-        verbose_name_plural = 'sizes'
+        verbose_name = _('size')
+        verbose_name_plural = _('sizes')
 
 
 class ProductManufacture(models.Model):
@@ -79,16 +81,17 @@ class ProductManufacture(models.Model):
 
     class Meta:
         ordering = ['name']
-        verbose_name = 'manufacture'
-        verbose_name_plural = 'manufactures'
+        verbose_name = _('manufacture')
+        verbose_name_plural = _('manufactures')
 
 
 class ProductModel(models.Model):
     objects = None
+
     image = models.ImageField(upload_to='products/')
     image1 = models.ImageField(upload_to='products/')
 
-    title = models.CharField(max_length=100)
+    title = models.CharField(max_length=100, db_index=True)
     short_info = models.CharField(max_length=200)
     long_description = models.TextField(default="")
     price = models.DecimalField(max_digits=7, decimal_places=2)
@@ -124,8 +127,8 @@ class ProductModel(models.Model):
 
     class Meta:
         ordering = ['title']
-        verbose_name = 'product'
-        verbose_name_plural = 'products'
+        verbose_name = _('product')
+        verbose_name_plural = _('products')
 
 
 class ProductImageModel(models.Model):
@@ -137,8 +140,25 @@ class ProductImageModel(models.Model):
 
     class Meta:
         ordering = ['title']
-        verbose_name = 'image'
-        verbose_name_plural = 'images'
+        verbose_name = _('image')
+        verbose_name_plural = _('images')
 
 
+UserModel = get_user_model()
 
+
+class ProductCommentModel(models.Model):
+    objects = None
+    product = models.ForeignKey(ProductModel, on_delete=models.CASCADE, related_name='comments')
+    user = models.ForeignKey(UserModel, on_delete=models.CASCADE, related_name='comments')
+    message = models.TextField()
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.message
+
+    class Meta:
+        verbose_name = _('comment')
+        verbose_name_plural = _('comments')

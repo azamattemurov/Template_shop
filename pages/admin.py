@@ -1,8 +1,20 @@
 from django.contrib import admin
+from modeltranslation.admin import TranslationAdmin
+
 from pages.models import *
 # Register your models here.
 @admin.register(InfoModel)
-class InfoModelAdmin(admin.ModelAdmin):
+class InfoModelAdmin(TranslationAdmin):
     list_display = ('name', 'created_at')
     search_fields = ('name', 'created_at')
     list_filter = ('name', 'created_at')
+
+    class Media:
+        js = (
+            'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js',
+            'http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js',
+            'modeltranslation/js/tabbed_translation_fields.js',
+        )
+        css = {
+            'screen': ('modeltranslation/css/tabbed_translation_fields.css',),
+        }

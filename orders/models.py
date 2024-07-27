@@ -1,6 +1,6 @@
 from django.contrib.auth import get_user_model
 from django.db import models
-
+from django.utils.translation import gettext_lazy as _
 from products.models import ProductModel
 
 UserModel = get_user_model()
@@ -18,8 +18,8 @@ class OrderModel(models.Model):
         return str(self.id)
 
     class Meta:
-        verbose_name = 'Order'
-        verbose_name_plural = 'Orders'
+        verbose_name = _('Order')
+        verbose_name_plural = _('Orders')
 
 
 class OrderItem(models.Model):
@@ -36,5 +36,5 @@ class OrderItem(models.Model):
         return str(self.id)
 
     class Meta:
-        verbose_name = 'Order item'
-        verbose_name_plural = 'Orders items'
+        verbose_name = _('Order item')
+        verbose_name_plural = _('Orders items')

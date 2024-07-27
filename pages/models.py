@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.utils.translation import gettext_lazy as _
 
 class InfoModel(models.Model):
     objects = None
@@ -14,5 +14,5 @@ class InfoModel(models.Model):
         return self.name
 
     class Meta:
-        verbose_name = 'info'
-        verbose_name_plural = 'infos'
+        verbose_name = _('info')
+        verbose_name_plural = _('infos')

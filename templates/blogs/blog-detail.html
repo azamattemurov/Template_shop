@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 {% block content %}
 <div class="main-content">
         <div id="wrapper-site">
@@ -19,12 +20,12 @@
                                         </li>
                                         <li>
                                             <a href="#">
-                                                <span>Living Room</span>
+                                                <span>Blog {% trans 'List' %}</span>
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#">
-                                                <span>Sofa</span>
+                                                <span>Blog {% trans 'Detail' %}</span>
                                             </a>
                                         </li>
                                     </ol>
@@ -38,7 +39,7 @@
 
                                         <!-- category -->
                                         <div class="sidebar-block">
-                                            <div class="title-block">Categories</div>
+                                            <div class="title-block">{% trans 'Categories' %}</div>
                                             <div class="block-content">
                                                 {% for cat in category %}
                                                 <div class="cateTitle hasSubCategory open level1">
@@ -50,7 +51,7 @@
 
                                         <!-- recent posts -->
                                         <div class="sidebar-block">
-                                            <div class="title-block">Recent Posts</div>
+                                            <div class="title-block">{% trans 'Recent Posts' %}</div>
                                             <div class="post-item-content">
                                                 {% for blog in famous_blogs %}
                                                 <div>
@@ -78,7 +79,7 @@
                                         <!-- product tag -->
                                         <div class="sidebar-block product-tags">
                                             <div class="title-block">
-                                                Blog Tags
+                                                {% trans 'Tags blog' %}
                                             </div>
                                             <div class="block-content">
                                                 <ul class="listSidebarBlog list-unstyled">
@@ -114,21 +115,21 @@
                                             <div class="border-detail">
                                                 <p class="post-info float-left">
                                                     <span>{{ blog.created_at }}</span>
-                                                    <span>113 Comments</span>
+                                                    <span>113 {% trans 'Comments' %}</span>
                                                     <span>{{ blog.author.name }}</span>
                                                 </p>
                                                 <div class="btn-group">
                                                     <a href="#">
                                                         <i class="zmdi zmdi-share"></i>
-                                                        <span>Share</span>
+                                                        <span>{% trans 'Share' %}</span>
                                                     </a>
                                                     <a href="#" class="email">
                                                         <i class="fa fa-envelope" aria-hidden="true"></i>
-                                                        <span>SEN TO A FRIEND</span>
+                                                        <span>{% trans 'Send to Friends' %}</span>
                                                     </a>
                                                     <a href="#" class="print">
                                                         <i class="zmdi zmdi-print"></i>
-                                                        <span>Print</span>
+                                                        <span>{% trans 'Print' %}</span>
                                                     </a>
                                                 </div>
                                             </div>
@@ -151,7 +152,7 @@
                                             </div>
                                         </div>
                                         <div class="related">
-                                            <h2 class="title-block">Related News</h2>
+                                            <h2 class="title-block">{% trans 'Related News' %}</h2>
                                             <div class="main-blogs">
                                                 <div class="row">
                                                     {% for blog in related_blogs %}

@@ -12,9 +12,19 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+# settings.py
+import os
+
+TELEGRAM_BOT_TOKEN ='7056065629:AAFkH2T7vstAuZ4GimXNrnFC5Lv9yt8eYec'
+
+TELEGRAM_WEBHOOK_URL = 'https://7fe2-37-110-215-15.ngrok.io/telegram/webhook/'
+
+
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-TEMPLATE = os.path.join(BASE_DIR,'templates/')
+TEMPLATE = os.path.join(BASE_DIR, 'templates/')
 
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
 
@@ -29,10 +39,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
+    'modeltranslation',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -45,12 +55,17 @@ INSTALLED_APPS = [
     'products',
     'users',
     'orders',
+    'resume',
+    'telegram_bot'
 
 ]
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -78,7 +93,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'temp_pr.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
@@ -88,7 +102,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -108,20 +121,38 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en'
+MODELTRANSLATION_DEFAULT_LANGUAGE = 'en'
 
+LANGUAGES = [
+    ('en', 'English'),
+    ('uz', 'Uzbek'),
+]
+
+LOCALE_PATHS = (BASE_DIR / 'locale',)
+
+gettext = lambda s: s
 TIME_ZONE = 'Asia/Tashkent'
+SITE_ID = 1
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.debug',
+    'django.core.context_processors.i18n',
+    # this one
+    'django.core.context_processors.request',
+    'django.core.context_processors.static',
+    'django.contrib.messages.context_processors.messages',
+)
 
 USE_I18N = True
 
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
@@ -148,3 +179,11 @@ EMAIL_HOST_PASSWORD = 'muvx siht enrr gcym'  # Your Gmail password or App Passwo
 
 # Optional: If you want to specify a 'From' address for outgoing emails
 DEFAULT_FROM_EMAIL = 'sotvoldiyevazamat193@gmail.com'
+
+LOGIN_URL = '/users/login/'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+
+# Tizimga kirish sahifasining URL manzili
+
+

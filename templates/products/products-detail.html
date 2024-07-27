@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
+{% load my_tags %}
 {% load static %}
+{% load i18n %}
 {% block content %}
 <div class="main-content">
         <div id="wrapper-site">
@@ -14,17 +16,17 @@
                                     <ol>
                                         <li>
                                             <a href="#">
-                                                <span>Home</span>
+                                                <span>{% trans 'Home'%}</span>
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#">
-                                                <span>Living Room</span>
+                                                <span> {%  trans 'Products' %}</span>
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#">
-                                                <span>Sofa</span>
+                                                <span>{% trans 'Detail' %}</span>
                                             </a>
                                         </li>
                                     </ol>
@@ -38,7 +40,7 @@
 
                                         <!-- category -->
                                         <div class="sidebar-block">
-                                            <div class="title-block">Categories</div>
+                                            <div class="title-block">{% trans 'Categories' %}</div>
                                             <div class="block-content">
                                                 {% for cat in categories %}
                                                     <li>
@@ -52,11 +54,13 @@
                                         </div>
 
                                         <!-- best seller -->
+                                    
                                         <div class="sidebar-block">
                                             <div class="title-block">
                                             </div>
                                             <div class="product-content tab-content">
                                                 <div class="row">
+                                                <h3>{% trans 'NEWS PRODUCTS' %}</h3>
                                                   {% for pr in product %}
                                                     <div class="item col-md-12">
                                                         <div class="product-miniature item-one first-item d-flex">
@@ -98,7 +102,7 @@
                                         <!-- product tag -->
                                         <div class="sidebar-block product-tags">
                                             <div class="title-block">
-                                                Product Tags
+                                                {% trans 'Tags' %}
                                             </div>
                                             <div class="block-content">
                                                 <ul class="listSidebarBlog list-unstyled">
@@ -192,15 +196,15 @@
                                                                 <span class="price">%{{ products.price}}</span>
                                                             {% endif %}
                                                             <span class="float-right">
-                                                                <span class="availb">Availability: </span>
+                                                                <span class="availb">{% trans 'Availability' %}: </span>
                                                                 {% if products.is_available %}
                                                                     <span class="check">
                                                                         <i class="fa fa-check-square-o" aria-hidden="true">
-                                                                        </i>IN STOCK</span>
+                                                                        </i>{% trans 'IN STOCK' %}</span>
                                                                     </span>
                                                                 {% else %}
                                                                     <span class="check">
-                                                                        <i style="color: red" class="fa-solid fa-xmark" aria-hidden="true"> NOT IN STOCK</i>
+                                                                        <i style="color: red" class="fa-solid fa-xmark" aria-hidden="true">{% trans ' NOT IN STOCK' %}</i>
                                                                     </span>
                                                                 {% endif %}
                                                         </div>
@@ -208,7 +212,7 @@
                                                         <div class="option has-border d-lg-flex size-color">
 
                                                             <div class="size">
-                                                                <span class="size">size :</span>
+                                                                <span class="size">{% trans 'size' %} :</span>
                                                                 <label>
                                                                     <select>
                                                                         {% for size in products.sizes.all %}
@@ -218,7 +222,7 @@
                                                                 </label>
                                                             </div>
                                                             <div class="colors">
-                                                                <b class="title">Color :</b>
+                                                                <b class="title">{% trans 'color' %} :</b>
                                                                  {% for color in products.color.all %}
                                                                         <span style="background-color:{{ color.code }}"
                                                                             class="blue"></span>
@@ -239,7 +243,7 @@
                                                                         <span class="add">
                                                                             <button class="btn btn-primary add-to-cart add-item" data-button-action="add-to-cart" type="submit">
                                                                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                                                                <span>Add to cart</span>
+                                                                                <span>{% trans 'Add to card' %}</span>
                                                                             </button>
                                                                         </span>
                                                                     </div>
@@ -253,21 +257,21 @@
                                                             <div class="btn-group">
                                                                 <a href="#">
                                                                     <i class="zmdi zmdi-share"></i>
-                                                                    <span>Share</span>
+                                                                    <span>{% trans 'Share' %}</span>
                                                                 </a>
                                                                 <a href="#" class="email">
                                                                     <i class="fa fa-envelope" aria-hidden="true"></i>
-                                                                    <span>SEN TO A FRIEND</span>
+                                                                    <span>{% trans 'SEN TO A FRIEND' %}</span>
                                                                 </a>
                                                                 <a href="#" class="print">
                                                                     <i class="zmdi zmdi-print"></i>
-                                                                    <span>Print</span>
+                                                                    <span>{% trans 'Print' %}</span>
                                                                 </a>
                                                             </div>
                                                         </div>
                                                         <div class="rating-comment has-border d-flex">
                                                             <div class="review-description d-flex">
-                                                                <span>REVIEW :</span>
+                                                                <span>{% trans 'REVIEW' %} :</span>
                                                                 <div class="rating">
                                                                     <div class="star-content">
                                                                         <div class="star"></div>
@@ -281,13 +285,13 @@
                                                             <div class="read after-has-border">
                                                                 <a href="#review">
                                                                     <i class="fa fa-commenting-o color" aria-hidden="true"></i>
-                                                                    <span>READ REVIEWS (3)</span>
+                                                                    <span>{% trans 'READ REVIEWS (3)' %}</span>
                                                                 </a>
                                                             </div>
                                                             <div class="apen after-has-border">
                                                                 <a href="#review">
                                                                     <i class="fa fa-pencil color" aria-hidden="true"></i>
-                                                                    <span>WRITE A REVIEW</span>
+                                                                    <span>{% trans 'WRITE A REVIEW' %}</span>
                                                                 </a>
                                                             </div>
                                                         </div>
@@ -297,14 +301,14 @@
                                                                     <a href="#">{{ products.sku }}</a>
                                                                 </span>
                                                             </p>
-                                                            <p>Categories :
+                                                            <p>{% trans 'Categories' %} :
                                                                  {% for cat in products.categories.all %}
                                                                 <span class="content2">
                                                                      <a class="cateItem" href="?cat={{ cat.id }}">{{ cat.name }}</a>
                                                                 </span>
                                                                 {% endfor %}
                                                             </p>
-                                                            <p>tags :
+                                                            <p>{% trans 'tags' %} :
                                                                 {% for tag in products.tags.all %}
                                                                 <span class="content2">
                                                                     <a href="?tag={{ tag.id }}" title="Show products matching tag Hot Trend">{{ tag.name }}</a>
@@ -319,10 +323,10 @@
                                             <div class="review">
                                                 <ul class="nav nav-tabs">
                                                     <li class="active">
-                                                        <a data-toggle="tab" href="#description" class="active show">Description</a>
+                                                        <a data-toggle="tab" href="#description" class="active show">{% trans 'Description' %}</a>
                                                     </li>
                                                     <li>
-                                                        <a data-toggle="tab" href="#review">Reviews (2)</a>
+                                                        <a data-toggle="tab" href="#review">{% trans 'Reviews' %} (2)</a>
                                                     </li>
                                                 </ul>
 
@@ -331,26 +335,37 @@
                                                         <p>{{ products.long_description }}
                                                         </p>
                                                     </div>
-
                                                     <div id="review" class="tab-pane fade">
-                                                        <form method="post" action="" class="new-review-form">
-                                                            <fieldset class="spr-form-contact">
-                                                                <div class="spr-form-contact-name">
-                                                                    <input class="spr-form-input spr-form-input-text form-control" value="" placeholder="Enter your name">
+                                                        <div class="spr-form">
+                                                            {% for comment in comments %}
+                                                            <div class="user-comment">
+                                                                <div class="spr-review">
+                                                                    <div class="spr-review-header">
+                                                                        <span class="spr-review-header-byline">
+                                                                            <strong>{{ comment.user.username }}</strong>
+                                                                            <span>{{ comment.created_at|date }}</span>
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="spr-review-content">
+                                                                        <p class="spr-review-content-body">{{ comment.message }}</p>
+                                                                    </div>
                                                                 </div>
-                                                                <div class="spr-form-contact-email">
-                                                                    <input class="spr-form-input spr-form-input-email form-control" value="" placeholder="Enter your email">
-                                                                </div>
-                                                            </fieldset>
+                                                            </div>
+                                                            {% endfor %}
+                                                        </div>
+                                                        <form method="post" action="{% url 'products:comment' pk=products.id %}?next={{ request.get_full_path|urlencode }}" class="new-review-form">
+                                                            {% csrf_token %}
+                                                            <input type="hidden" name="review[rating]" value="3">
+                                                            <input type="hidden" name="product_id">
                                                             <fieldset>
                                                                 <div class="spr-form-review-body">
                                                                     <div class="spr-form-input">
-                                                                        <textarea class="spr-form-input-textarea" rows="10" placeholder="Write your comments here"></textarea>
+                                                                        <textarea class="spr-form-input-textarea" rows="10" placeholder="{% trans 'Messages'%}"></textarea>
                                                                     </div>
                                                                 </div>
                                                             </fieldset>
                                                             <div class="submit">
-                                                                <input type="submit" name="addComment" id="submitComment" class="btn btn-default" value="Submit">
+                                                                <input type="submit" name="addComment" id="submitComment" class="btn btn-default" value="{% trans 'Submit' %}">
                                                             </div>
                                                         </form>
                                                     </div>
@@ -359,7 +374,7 @@
                                             <div class="related">
                                                 <div class="title-tab-content  text-center">
                                                     <div class="title-product justify-content-start">
-                                                        <h2>Related Products</h2>
+                                                        <h3>{% trans 'Soon News' %}</h3>
                                                     </div>
                                                 </div>
                                                 <div class="tab-content">

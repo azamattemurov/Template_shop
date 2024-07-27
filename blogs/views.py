@@ -12,11 +12,14 @@ class BlogListView(ListView):
         qs = BlogModel.objects.all().order_by('-pk')
         cat = self.request.GET.get('cat')
         tag = self.request.GET.get('tag')
+        q = self.request.GET.get('q')
 
         if cat:
             qs = qs.filter(category__in=cat)
         if tag:
             qs = qs.filter(tags__in=tag)
+        if q:
+            qs = qs.filter(title__icontains=q)
 
         return qs
 
@@ -24,7 +27,8 @@ class BlogListView(ListView):
         context = super().get_context_data(**kwargs)
         context['categories'] = BlogCategoryModel.objects.all()
         context['tags'] = BlogTagModel.objects.all()
-        context['famous_blogs'] = BlogModel.objects.all().order_by('-created_at')[:2]
+        context['famous_blogs'] = BlogModel.objects.all().order_by('-created_at')
+        context["related_blogs"]= BlogModel.objects.all().order_by('-created_at')
 
         return context
 

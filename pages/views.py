@@ -39,3 +39,4 @@ class ContactTemplateView(FormView):
 
 class ThankYouView(TemplateView):
     template_name = 'thank_you.html'
+
