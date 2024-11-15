@@ -1,13 +1,14 @@
 from django.contrib import admin
 
 from orders.models import OrderModel, OrderItem
+from orders.forms import OrderModelForm
 
 
-# Register your models here.
 @admin.register(OrderModel)
 class OrderModelAdmin(admin.ModelAdmin):
-    list_display = ['id','status','created_at','updated_at']
-    list_filter = ['status','created_at','updated_at']
+    list_display = ['id','user', 'status', 'created_at', 'updated_at']
+    list_filter = ['status', 'created_at', 'updated_at']
+
 
 
 @admin.register(OrderItem)

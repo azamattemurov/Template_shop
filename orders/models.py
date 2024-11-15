@@ -10,7 +10,6 @@ UserModel = get_user_model()
 class OrderModel(models.Model):
     user = models.ForeignKey(UserModel, on_delete=models.CASCADE, related_name='orders')
     status = models.BooleanField(default=False)
-
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

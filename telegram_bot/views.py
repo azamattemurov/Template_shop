@@ -10,3 +10,4 @@ def webhook(request):
         return JsonResponse({"status": "ok"})
     else:
         return JsonResponse({"status": "error", "message": "Invalid request method"})
+

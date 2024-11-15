@@ -13,14 +13,15 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 # settings.py
-import os
+from environs import Env
 
-TELEGRAM_BOT_TOKEN ='7056065629:AAFkH2T7vstAuZ4GimXNrnFC5Lv9yt8eYec'
+env = Env()
+env.read_env()
+
+
+TELEGRAM_BOT_TOKEN = '7056065629:AAFkH2T7vstAuZ4GimXNrnFC5Lv9yt8eYec'
 
 TELEGRAM_WEBHOOK_URL = 'https://7fe2-37-110-215-15.ngrok.io/telegram/webhook/'
-
-
-
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -32,12 +33,13 @@ STATIC_DIR = os.path.join(BASE_DIR, 'static')
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-!c41y(*7%3m84j$nk*b*t3u8z1w4h8+2ojpp+b(%+8^q0^1wz#'
+SECRET_KEY = env.str("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env.bool("DEBUG", default=False)
 
-ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = ['.herokuapp.com','127.0.0.1']
 
 # Application definition
 
@@ -48,6 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
 
     'pages',
@@ -60,11 +63,10 @@ INSTALLED_APPS = [
 
 ]
 
-
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -97,10 +99,7 @@ WSGI_APPLICATION = 'temp_pr.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': env.dj_db_url("DATABASE_URL")
 }
 
 # Password validation
@@ -157,12 +156,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = 'static/'
-STATIC_ROOT = 'static/'
-STATICFILES_DIRS = (BASE_DIR / 'assets',)
-
+# Statik fayllar
+STATIC_URL = '/static/'
+STATICFILES_DIRS = (BASE_DIR / 'assets',)  # Development uchun statik papkalar
+STATIC_ROOT = BASE_DIR / 'staticfiles'  # Production rejimi uchun
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# Media fayllar
 MEDIA_URL = '/media/'
-MEDIA_ROOT = 'media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -185,5 +186,3 @@ LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
 # Tizimga kirish sahifasining URL manzili
-
-

@@ -3,6 +3,10 @@ from django.http import FileResponse, HttpResponse
 from django.views.generic import TemplateView, FormView
 from resume.forms import ContactForm
 from django.urls import reverse_lazy
+from django.core.mail import send_mail
+from django.urls import reverse_lazy
+from django.views.generic.edit import FormView
+from .forms import ContactForm
 
 class HomePageView(TemplateView):
     template_name = 'index.html'
